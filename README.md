@@ -11,8 +11,6 @@ A powerful and flexible ESLint configuration designed for **Node.js**, **React**
     - [Node.js](#nodejs)
 - [Contributing](#contributing)
 
----
-
 ## 🚀 What's Included?
 
 This package offers a set of predefined ESLint configurations tailored for different environments:
@@ -22,8 +20,6 @@ This package offers a set of predefined ESLint configurations tailored for diffe
 - **React Hooks Plugin**: Ensures correct usage of React Hooks.
 - **JSX a11y Plugin**: Encourages accessibility best practices in JSX code.
 - **Prettier**: Integrates Prettier for consistent code formatting.
-
----
 
 ## 💻 Installation & Setup
 
@@ -46,8 +42,6 @@ This package offers a set of predefined ESLint configurations tailored for diffe
     }
     ```
 
----
-
 ### ⚛️ React
 
 1. **Install dependencies:**
@@ -64,8 +58,6 @@ This package offers a set of predefined ESLint configurations tailored for diffe
     }
     ```
 
----
-
 ### 🖥️ Node.js
 
 1. **Install dependencies:**
@@ -81,8 +73,6 @@ This package offers a set of predefined ESLint configurations tailored for diffe
         "extends": ["@csendin/eslint-config/node"]
     }
     ```
-
----
 
 ## 🤝 Contributing
 
