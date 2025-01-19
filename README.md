@@ -2,7 +2,7 @@
 
 A powerful and flexible ESLint configuration designed for **Node.js**, **React**, and **Next.js** projects, ensuring high-quality and consistent code across your codebase.
 
-## 📝 Table of Contents
+## Table of Contents
 
 - [What's Included?](#whats-included)
 - [Installation & Setup](#installation--setup)
@@ -11,38 +11,19 @@ A powerful and flexible ESLint configuration designed for **Node.js**, **React**
     - [Node.js](#nodejs)
 - [Contributing](#contributing)
 
-## 🚀 What's Included?
+## What's Included?
 
 This package offers a set of predefined ESLint configurations tailored for different environments:
 
 - **Standard Config Base**: General rules that apply across various environments.
 - **React Plugin**: Optimizes linting for React projects.
-- **React Hooks Plugin**: Ensures correct usage of React Hooks.
-- **JSX a11y Plugin**: Encourages accessibility best practices in JSX code.
 - **Prettier**: Integrates Prettier for consistent code formatting.
 
-## 💻 Installation & Setup
+Note: The **React Hooks plugin** and other plugins are currently being updated to support the latest ESLint version. Please check back for updates.
 
-### 🔥 React with Next.js
+## Installation & Setup
 
-1. **Install dependencies:**
-
-    ```bash
-    npm i @csendin/eslint-config -D
-    ```
-
-2. **Configure ESLint**: Update your `.eslintrc.json` file:
-
-    ```json
-    {
-        "extends": [
-            "@csendin/eslint-config/next",
-            "next/core-web-vitals"
-        ]
-    }
-    ```
-
-### ⚛️ React
+### React with Next.js
 
 1. **Install dependencies:**
 
@@ -50,15 +31,16 @@ This package offers a set of predefined ESLint configurations tailored for diffe
     npm i @csendin/eslint-config -D
     ```
 
-2. **Configure ESLint**: Update your `.eslintrc.json` file:
+2. **Configure ESLint**: Update your `eslint.config.mjs` file:
 
-    ```json
-    {
-        "extends": ["@csendin/eslint-config/react"]
-    }
+    ```js
+    import config from '@csendin/eslint-config/next.mjs'
+
+    /** @type {import('eslint').Linter.Config[]} */
+    export default [...config]
     ```
 
-### 🖥️ Node.js
+### React
 
 1. **Install dependencies:**
 
@@ -66,14 +48,32 @@ This package offers a set of predefined ESLint configurations tailored for diffe
     npm i @csendin/eslint-config -D
     ```
 
-2. **Configure ESLint**: Update your `.eslintrc.json` file:
+2. **Configure ESLint**: Update your `eslint.config.mjs` file:
 
-    ```json
-    {
-        "extends": ["@csendin/eslint-config/node"]
-    }
+    ```js
+    import config from '@csendin/eslint-config/react.mjs'
+
+    /** @type {import('eslint').Linter.Config[]} */
+    export default [...config]
     ```
 
-## 🤝 Contributing
+### Node.js
+
+1. **Install dependencies:**
+
+    ```bash
+    npm i @csendin/eslint-config -D
+    ```
+
+2. **Configure ESLint**: Update your `eslint.config.mjs` file:
+
+    ```js
+    import config from '@csendin/eslint-config/node.mjs'
+
+    /** @type {import('eslint').Linter.Config[]} */
+    export default [...config]
+    ```
+
+## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have suggestions for improvements.
